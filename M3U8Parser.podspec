@@ -132,6 +132,6 @@ Pod::Spec.new do |s|
   #    ss.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/google-cast-sdk"}
   #end
 
-
+  s.prefix_header_contents = '#import "M3U8Kit.h"'
 
 end

@@ -26,4 +26,8 @@
 
 #import "NSString+m3u8.h"
 
+#import "M3U8TagsAndAttributes.h"
+
+#define M3U8_BASE_URL @"baseURL"
+
 #endif
