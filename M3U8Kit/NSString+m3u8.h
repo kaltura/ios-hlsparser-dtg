@@ -17,4 +17,5 @@
 
 - (M3U8SegmentInfoList *)m3u8SegementInfoListValueRelativeToURL:(NSURL *)baseURL;
 
+- (M3U8SegmentInfoList *)m3u8KeyList;
 @end

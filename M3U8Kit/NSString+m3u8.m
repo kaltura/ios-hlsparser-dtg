@@ -125,4 +125,34 @@
     return segmentInfoList;
 }
 
+- (M3U8SegmentInfoList *)m3u8KeyList {
+    NSArray *allLinedStrings = [self componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    M3U8SegmentInfoList *result = [[M3U8SegmentInfoList alloc] init];
+
+    for (NSString *line in allLinedStrings) {
+        NSRange range = [line rangeOfString:M3U8_EXT_X_KEY];
+        if (range.location == NSNotFound) {
+            continue;
+        }
+
+        NSMutableDictionary *dictionary = NSMutableDictionary.new;
+
+        NSString *attributeList = [line substringFromIndex:range.location + range.length];
+        NSArray *attributes = [attributeList componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
+        for (NSString *attribute in attributes) {
+            NSArray *parts = [attribute componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"="]];
+
+            NSString *key = parts[0];
+            NSString *value = parts[1];
+
+            dictionary[key] = value;
+        }
+
+        M3U8SegmentInfo *segmentInfo = [[M3U8SegmentInfo alloc] initWithDictionary:[NSDictionary dictionaryWithDictionary:dictionary]];
+        [result addSegementInfo:segmentInfo];
+    }
+
+    return result;
+}
+
 @end
