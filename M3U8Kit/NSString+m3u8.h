@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @class M3U8ExtXStreamInfList, M3U8SegmentInfoList;
+@class M3U8KeyList;
+
 @interface NSString (m3u8)
 
 - (BOOL)isExtendedM3Ufile;
@@ -17,5 +19,5 @@
 
 - (M3U8SegmentInfoList *)m3u8SegementInfoListValueRelativeToURL:(NSURL *)baseURL;
 
-- (M3U8SegmentInfoList *)m3u8KeyList;
+- (M3U8KeyList *)m3u8KeyList;
 @end

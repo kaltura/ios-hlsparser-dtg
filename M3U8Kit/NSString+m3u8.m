@@ -13,6 +13,8 @@
 #import "M3U8ExtXStreamInfList.h"
 
 #import "M3U8TagsAndAttributes.h"
+#import "M3U8KeyList.h"
+#import "M3U8KeyInfo.h"
 
 @implementation NSString (m3u8)
 
@@ -125,9 +127,9 @@
     return segmentInfoList;
 }
 
-- (M3U8SegmentInfoList *)m3u8KeyList {
+- (M3U8KeyList *)m3u8KeyList {
     NSArray *allLinedStrings = [self componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    M3U8SegmentInfoList *result = [[M3U8SegmentInfoList alloc] init];
+    M3U8KeyList *result = [[M3U8KeyList alloc] init];
 
     for (NSString *line in allLinedStrings) {
         NSRange range = [line rangeOfString:M3U8_EXT_X_KEY];
@@ -140,16 +142,16 @@
         NSString *attributeList = [line substringFromIndex:range.location + range.length];
         NSArray *attributes = [attributeList componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]];
         for (NSString *attribute in attributes) {
-            NSArray *parts = [attribute componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"="]];
+            NSRange split = [attribute rangeOfString:@"="];
 
-            NSString *key = parts[0];
-            NSString *value = parts[1];
+            NSString *key = [attribute substringToIndex:split.location];
+            NSString *value = [attribute substringFromIndex:split.location + 1];
 
             dictionary[key] = value;
         }
 
-        M3U8SegmentInfo *segmentInfo = [[M3U8SegmentInfo alloc] initWithDictionary:[NSDictionary dictionaryWithDictionary:dictionary]];
-        [result addSegementInfo:segmentInfo];
+        M3U8KeyInfo *keyInfo = [[M3U8KeyInfo alloc] initWithDictionary:[NSDictionary dictionaryWithDictionary:dictionary]];
+        [result addKeyInfo:keyInfo];
     }
 
     return result;

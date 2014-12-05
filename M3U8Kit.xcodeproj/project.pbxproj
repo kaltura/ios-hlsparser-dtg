@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630F697A489D587853D5E1B0 /* M3U8KeyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F6FA98F74AC36C7601F15 /* M3U8KeyList.m */; };
+		630F6A72F54C45B8CFF9FAB6 /* M3U8KeyList.h in Headers */ = {isa = PBXBuildFile; fileRef = 630F64E9F841D12BFB66E6A9 /* M3U8KeyList.h */; };
+		630F6BE5C5D565868F7C75EA /* M3U8KeyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F66A7874C3AA1DC151BC3 /* M3U8KeyInfo.m */; };
+		630F6BFF2357708F1379CA1D /* M3U8KeyInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 630F6E007F82911B02F1E830 /* M3U8KeyInfo.h */; };
 		9D08DDE51720D7A4006547F9 /* M3U8ExtXStreamInf.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D08DDE11720D7A4006547F9 /* M3U8ExtXStreamInf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D08DDE61720D7A4006547F9 /* M3U8ExtXStreamInf.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D08DDE21720D7A4006547F9 /* M3U8ExtXStreamInf.m */; };
 		9D08DDE71720D7A4006547F9 /* M3U8ExtXStreamInfList.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D08DDE31720D7A4006547F9 /* M3U8ExtXStreamInfList.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630F64E9F841D12BFB66E6A9 /* M3U8KeyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3U8KeyList.h; sourceTree = "<group>"; };
+		630F66A7874C3AA1DC151BC3 /* M3U8KeyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3U8KeyInfo.m; sourceTree = "<group>"; };
+		630F6E007F82911B02F1E830 /* M3U8KeyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3U8KeyInfo.h; sourceTree = "<group>"; };
+		630F6FA98F74AC36C7601F15 /* M3U8KeyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3U8KeyList.m; sourceTree = "<group>"; };
 		9D08DDE11720D7A4006547F9 /* M3U8ExtXStreamInf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3U8ExtXStreamInf.h; sourceTree = "<group>"; };
 		9D08DDE21720D7A4006547F9 /* M3U8ExtXStreamInf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M3U8ExtXStreamInf.m; sourceTree = "<group>"; };
 		9D08DDE31720D7A4006547F9 /* M3U8ExtXStreamInfList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M3U8ExtXStreamInfList.h; sourceTree = "<group>"; };
@@ -101,6 +109,10 @@
 				9DE181B11717EB480067A26B /* M3U8SegmentInfoList.m */,
 				9D83DBBF18E26DBE00CC8DBA /* M3U8MediaPlaylist.h */,
 				9D83DBC018E26DBE00CC8DBA /* M3U8MediaPlaylist.m */,
+				630F6E007F82911B02F1E830 /* M3U8KeyInfo.h */,
+				630F66A7874C3AA1DC151BC3 /* M3U8KeyInfo.m */,
+				630F64E9F841D12BFB66E6A9 /* M3U8KeyList.h */,
+				630F6FA98F74AC36C7601F15 /* M3U8KeyList.m */,
 			);
 			name = "Media Playlist";
 			sourceTree = "<group>";
@@ -199,6 +211,8 @@
 				9D08DDE51720D7A4006547F9 /* M3U8ExtXStreamInf.h in Headers */,
 				9D83DBC118E26DBE00CC8DBA /* M3U8MediaPlaylist.h in Headers */,
 				9D08DDE71720D7A4006547F9 /* M3U8ExtXStreamInfList.h in Headers */,
+				630F6BFF2357708F1379CA1D /* M3U8KeyInfo.h in Headers */,
+				630F6A72F54C45B8CFF9FAB6 /* M3U8KeyList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +334,8 @@
 				9D807A5D18E1948800192C95 /* M3U8MasterPlaylist.m in Sources */,
 				9D83DBC218E26DBE00CC8DBA /* M3U8MediaPlaylist.m in Sources */,
 				9D08DDE81720D7A4006547F9 /* M3U8ExtXStreamInfList.m in Sources */,
+				630F6BE5C5D565868F7C75EA /* M3U8KeyInfo.m in Sources */,
+				630F697A489D587853D5E1B0 /* M3U8KeyList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
