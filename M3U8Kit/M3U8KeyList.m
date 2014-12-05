@@ -28,4 +28,8 @@
     return (M3U8KeyInfo *) self.array[index];
 }
 
+- (NSUInteger)count {
+    return [self.array count];
+}
+
 @end
