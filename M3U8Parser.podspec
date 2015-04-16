@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.name         = "M3U8Parser"
   s.version      = "0.0.1"
   s.summary      = "M3U8 Playlist parser functionality for iOS"
-  s.homepage     = "https://github.com/YouSee/M3U8Paser"
+  s.homepage     = "https://github.com/alexzchut/M3U8Paser"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.authors            = "Jeanvf@github.com"
+  s.authors            = ""
   # Or just: s.author    = "cmvagner"
   # s.authors            = { "cmvagner" => "cmvagner@gmail.com" }
 
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/YouSee/M3U8Paser.git", :branch => "master" }
+  s.source       = { :git => "https://github.com/alexzchut/M3U8Paser.git", :branch => "master" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
