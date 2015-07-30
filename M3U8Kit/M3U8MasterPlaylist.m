@@ -93,7 +93,7 @@
             
             M3U8ExtXStreamInf *lastStreamInf = self.xStreamList.lastXStreamInf;
             if (lastStreamInf) {
-                if ([lastStreamInf.URI isEqualToString:line]) {
+                if ([line rangeOfString:lastStreamInf.URI].location != NSNotFound) {
                     [lastStreamInf appendToOriginalLines:line];
                 }
             }
