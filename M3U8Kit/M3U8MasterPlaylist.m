@@ -93,7 +93,7 @@
             
             M3U8ExtXStreamInf *lastStreamInf = self.xStreamList.lastXStreamInf;
             if (lastStreamInf) {
-                if ([line rangeOfString:[NSString stringWithFormat:@"%ld", lastStreamInf.bandwidth]].location != NSNotFound) {
+                if ([line rangeOfString:[NSString stringWithFormat:@"%ld", (long)lastStreamInf.bandwidth]].location != NSNotFound) {
                     [lastStreamInf appendToOriginalLines:line];
                 }
             }
