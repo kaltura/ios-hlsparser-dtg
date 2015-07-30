@@ -56,10 +56,10 @@ NSString * NSStringFromMediaResolution(MediaResoulution resolution);
 @property (nonatomic, readonly) NSString *subtitles;
 @property (nonatomic, readonly) NSString *closedCaptions;
 @property (nonatomic, readonly) NSString *URI;
-@property (nonatomic, readonly) NSString *originalLines;
+@property (nonatomic, readonly) NSMutableArray *originalLines;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 - (NSURL *)m3u8URL; // the absolute url
-
+- (void) appendToOriginalLines:(NSString*) text;
 @end

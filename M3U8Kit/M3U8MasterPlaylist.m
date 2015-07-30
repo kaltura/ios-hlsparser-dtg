@@ -79,7 +79,8 @@
                 attr[M3U8_BASE_URL] = self.baseURL;
             }
             
-            attr[ORIGINAL_LINES] = [[line stringByAppendingString:@"\n"] stringByAppendingString:nextLine];
+            NSMutableArray *arrLines = [NSMutableArray arrayWithObjects:line , nextLine, nil];
+            attr[ORIGINAL_LINES] = arrLines;
             remainingPart = [remainingPart substringFromIndex:crRange.location +1];
             crRange = [remainingPart rangeOfString:@"\n"];
             
@@ -90,7 +91,12 @@
         // #EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=65531,PROGRAM-ID=1,CODECS="avc1.42c00c",RESOLUTION=320x180,URI="/talks/769/video/64k_iframe.m3u8?sponsor=Ripple"
         else if ([line hasPrefix:M3U8_EXT_X_I_FRAME_STREAM_INF]) {
             
-            
+            M3U8ExtXStreamInf *lastStreamInf = self.xStreamList.lastXStreamInf;
+            if (lastStreamInf) {
+                if ([lastStreamInf.URI isEqualToString:line]) {
+                    lastStreamInf
+                }
+            }
         }
         
         // #EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="600k",LANGUAGE="eng",NAME="Audio",AUTOSELECT=YES,DEFAULT=YES,URI="/talks/769/audio/600k.m3u8?sponsor=Ripple",BANDWIDTH=614400

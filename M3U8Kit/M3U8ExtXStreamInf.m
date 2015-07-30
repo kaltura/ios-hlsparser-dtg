@@ -94,5 +94,10 @@ MediaResoulution MediaResolutionMake(float width, float height) {
     return self.dictionary[ORIGINAL_LINES];
 }
 
+- (void) appendToOriginalLines:(NSString*) text {
+    NSMutableArray *lines = _dictionary[ORIGINAL_LINES];
+    [lines addObject:text];
+}
+
 
 @end
