@@ -94,7 +94,7 @@
             M3U8ExtXStreamInf *lastStreamInf = self.xStreamList.lastXStreamInf;
             if (lastStreamInf) {
                 if ([lastStreamInf.URI isEqualToString:line]) {
-                    lastStreamInf
+                    [lastStreamInf appendToOriginalLines:line];
                 }
             }
         }
