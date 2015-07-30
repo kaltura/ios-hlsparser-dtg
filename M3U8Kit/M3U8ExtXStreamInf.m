@@ -90,4 +90,9 @@ MediaResoulution MediaResolutionMake(float width, float height) {
     return self.dictionary[M3U8_EXT_X_STREAM_INF_URI];
 }
 
+- (NSString *)originalLines {
+    return self.dictionary[ORIGINAL_LINES];
+}
+
+
 @end

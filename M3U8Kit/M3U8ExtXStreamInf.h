@@ -55,7 +55,8 @@ NSString * NSStringFromMediaResolution(MediaResoulution resolution);
 @property (nonatomic, readonly) NSString *video;
 @property (nonatomic, readonly) NSString *subtitles;
 @property (nonatomic, readonly) NSString *closedCaptions;
-@property (nonatomic, readonly) NSString   *URI;
+@property (nonatomic, readonly) NSString *URI;
+@property (nonatomic, readonly) NSString *originalLines;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

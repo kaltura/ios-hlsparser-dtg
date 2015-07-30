@@ -79,6 +79,7 @@
                 attr[M3U8_BASE_URL] = self.baseURL;
             }
             
+            attr[ORIGINAL_LINES] = [[line stringByAppendingString:@"\n"] stringByAppendingString:nextLine];
             remainingPart = [remainingPart substringFromIndex:crRange.location +1];
             crRange = [remainingPart rangeOfString:@"\n"];
             
