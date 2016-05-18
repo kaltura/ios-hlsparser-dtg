@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
 	s.name         = "M3U8Parser"
 	s.version      = "0.0.1"
+	s.author	   = "justMaku"
 	s.summary      = "M3U8 Playlist parser functionality for iOS"
 	s.homepage     = "https://github.com/alexzchut/M3U8Paser"
   	s.platform     = :ios, '7.0'
